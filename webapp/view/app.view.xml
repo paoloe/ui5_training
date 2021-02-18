@@ -7,7 +7,7 @@
 
    <!-- task 4 -->
    <Button
-      text="Say Hello"
+      text="{i18n>showHelloButtonText}"
       press=".onShowHello"/>
 
     <Input
