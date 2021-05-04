@@ -13,7 +13,7 @@
 		data-sap-ui-resourceroots='{
 			"sap.ui.demo.walkthrough": "./"
 		}'
-		data-sap-ui-oninit="module:sap/ui/demo/walkthrough/index">
+		data-sap-ui-oninit="module:sap/ui/core/ComponentSupport">
 	</script>
 </head>
 <!-- <body> -->
@@ -21,6 +21,7 @@
 	
 <body class="sapUiBody" id="content">
 	<!-- <div>Hello World: From task 1</div> -->
+	<div data-sap-ui-component data-name="sap.ui.demo.walkthrough" data-id="container" data-settings='{"id" : "walkthrough"}'></div>
 </body>	
 </body>
 </html>
