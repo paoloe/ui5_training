@@ -8,19 +8,40 @@
       <pages>
         <Page title="{i18n&gt;homePageTitle}">
           <content>
-            <Panel headerText="{i18n&gt;helloPanelTitle}">
+            <Panel 
+                  headerText="{i18n&gt;helloPanelTitle}"
+                  class="sapUiResponsiveMargin"
+                  width="auto">
               <content>
                 <!-- task 3 xml file -->
                 <!-- <Text text="Hello from the XML file!"/> -->
                 <!-- task 4 -->
-                <Button text="{i18n&gt;showHelloButtonText}" press=".onShowHello"/>
-                <Input value="{/recipient/name}" description="Hello {/recipient/name}" valueLiveUpdate="true" width="60%"/>
+                <Button text="{i18n&gt;showHelloButtonText}" 
+                        press=".onShowHello"
+                        class="sapUiSmallMarginEnd"/>
+                <Input  value="{/recipient/name}" 
+                        description="Hello {/recipient/name}" 
+                        valueLiveUpdate="true" 
+                        width="60%"/>
+                <Text
+                        text="Hello {/recipient/name}"
+                        class="sapUiSmallMargin"/>
               </content>
             </Panel>
-            <Panel headerText="{i18n&gt;helloPanelTitle2}">
+            <Panel  headerText="{i18n&gt;helloPanelTitle2}"
+                    class="sapUiResponsiveMargin"
+                    width="auto">
               <content>
-                <Button text="{i18n&gt;showHelloButtonText}" press=".onShowHello"/>
-                <Input value="{/recipient/name}" description="Hello {/recipient/name}" valueLiveUpdate="true" width="60%"/>
+                <Button text="{i18n&gt;showHelloButtonText}" 
+                        press=".onShowHello"
+                        class="sapUiSmallMarginEnd"/>
+                <Input  value="{/recipient/name}" 
+                        description="Hello {/recipient/name}" 
+                        valueLiveUpdate="true" 
+                        width="60%"/>
+                <!-- <Text
+                        text="Hello {/recipient/name}"
+                        class="sampleUiSmallMargin"/> -->
               </content>
             </Panel>
           </content>
