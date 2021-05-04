@@ -1,10 +1,9 @@
-<?xml version="1.0"?>
 <mvc:View xmlns="sap.m" 
           xmlns:mvc="sap.ui.core.mvc" 
           controllerName="sap.ui.demo.walkthrough.controller.App" 
           displayBlock="true">
   <Shell> 
-    <App>
+    <App class="myAppDemoWT">
       <pages>
         <Page title="{i18n&gt;homePageTitle}">
           <content>
@@ -18,14 +17,13 @@
                 <!-- task 4 -->
                 <Button text="{i18n&gt;showHelloButtonText}" 
                         press=".onShowHello"
-                        class="sapUiSmallMarginEnd"/>
+                        class="myCustomButton"/>
                 <Input  value="{/recipient/name}" 
-                        description="Hello {/recipient/name}" 
                         valueLiveUpdate="true" 
                         width="60%"/>
-                <Text
-                        text="Hello {/recipient/name}"
-                        class="sapUiSmallMargin"/>
+                <FormattedText
+                        htmlText="Hello {/recipient/name}"
+                        class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
               </content>
             </Panel>
             <Panel  headerText="{i18n&gt;helloPanelTitle2}"
@@ -34,7 +32,7 @@
               <content>
                 <Button text="{i18n&gt;showHelloButtonText}" 
                         press=".onShowHello"
-                        class="sapUiSmallMarginEnd"/>
+                        class="myCustomButton"/>
                 <Input  value="{/recipient/name}" 
                         description="Hello {/recipient/name}" 
                         valueLiveUpdate="true" 
