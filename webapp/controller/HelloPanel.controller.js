@@ -13,6 +13,7 @@ sap.ui.define([
           // show message
           MessageToast.show(sMsg);
        },
+
        // below is step 16: dialog function
        onOpenDialog : function (){
 			var oView = this.getView();
@@ -21,7 +22,8 @@ sap.ui.define([
 			if (!this.pDialog) {
 				this.pDialog = Fragment.load({
 					id: oView.getId(),
-					name: "sap.ui.demo.walkthrough.view.HelloDialog"
+					name: "sap.ui.demo.walkthrough.view.HelloDialog",
+               controller : this
 				}).then(function (oDialog) {
 					// connect dialog to the root view of this component (models, lifecycle)
 					oView.addDependent(oDialog);
@@ -31,6 +33,13 @@ sap.ui.define([
 			this.pDialog.then(function(oDialog) {
 				oDialog.open();
 			});          
-       }
+       },
+
+       // below is step 17 function that will close the dialog
+       onCloseDialog : function () {
+			// note: We don't need to chain to the pDialog promise, since this event-handler
+			// is only called from within the loaded dialog itself.
+			this.byId("helloDialog").close();
+		}       
     });
  });
