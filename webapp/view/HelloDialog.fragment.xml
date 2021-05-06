@@ -6,5 +6,10 @@
       id="helloDialog"
       title="Hello {/recipient/name}"
       titleAlignment="Center">
+      <beginButton>
+         <Button
+            text="{i18n>dialogCloseButtonText}"
+            press=".onCloseDialog"/>
+      </beginButton>
    </Dialog>
 </core:FragmentDefinition>
