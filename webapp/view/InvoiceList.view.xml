@@ -2,6 +2,7 @@
    controllerName="sap.ui.demo.walkthrough.controller.InvoiceList"
    xmlns="sap.m"
    xmlns:mvc="sap.ui.core.mvc">
+   <Panel accessibleRole="Region">
    <Table
       id="invoiceList"
       headerText="{i18n>invoiceListTitle}"
@@ -73,4 +74,5 @@
                </ColumnListItem>
             </items>
          </Table>
+      </Panel>
 </mvc:View>
